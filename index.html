@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Chrome Intent</title>
+    </head>
+    <body>
+        <button onclick="openChromeIntent()">Open in Chrome</button>
+        <script>
+            function openChromeIntent() {
+                const url = "https://example.com"; // your URL here
+                const intentUrl = `intent://${url.replace(
+                    /^https?:\/\//,
+                    ""
+                )}#Intent;scheme=https;package=com.android.chrome;end`;
+                window.location.href = intentUrl;
+            }
+        </script>
+    </body>
+</html>
